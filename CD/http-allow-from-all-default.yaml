@@ -10,6 +10,7 @@ spec:
   ingress:
   - ports:
     - port: 80
+    - port: 443
     from:
-    - {}
+    - namespaceSelector: {}
     
