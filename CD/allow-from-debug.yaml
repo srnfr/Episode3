@@ -9,4 +9,4 @@ spec:
     - from:
       - podSelector:
           matchLabels:
-            run: debug
+            type: debug
