@@ -7,6 +7,9 @@ spec:
   podSelector: {}
   ingress:
     - from:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: default
       - podSelector:
           matchLabels:
             type: debug
