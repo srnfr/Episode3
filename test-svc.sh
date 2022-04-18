@@ -1,9 +1,10 @@
 #!/bin/bash
 
-NSDEBUG="default"
+NSDEBUG="blue"
+LABEL="null"
 
 DEBUGPODNAME=debug$RANDOM
-kubectl run $DEBUGPODNAME --image=wbitt/network-multitool --restart=Never -l type=debug -n $NSDEBUG
+kubectl run $DEBUGPODNAME --image=wbitt/network-multitool --restart=Never -l type=$LABEL -n $NSDEBUG
 
 echo "Waiting for creation to complete..."
 kubectl wait --for=condition=Ready pod/$DEBUGPODNAME -n $NSDEBUG
