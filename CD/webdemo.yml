@@ -26,7 +26,7 @@ spec:
   selector:
     matchLabels:
       run: echoserver
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
