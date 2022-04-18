@@ -10,7 +10,7 @@ for ns in red green blue; do
 	svc=svc-echoserver.${ns}.svc
 	echo "-----------"
 	echo "Test vers ${svc}..."
-	kubectl exec -it $DEBUGPODNAME -- curl -sv --connect-timeout 3 -o /dev/null http://${svc}
+	kubectl exec -it $DEBUGPODNAME -- curl -sv --styled-output --connect-timeout 2 -o /dev/null http://${svc}
 	echo ""
 	echo ""
 done
