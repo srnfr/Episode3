@@ -8,4 +8,8 @@ spec:
     matchLabels:
       run: echo-server
   ingress:
-  - {}
+  - ports:
+    - port: 80
+    from:
+    - {}
+    
