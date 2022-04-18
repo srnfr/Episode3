@@ -7,4 +7,6 @@ spec:
   podSelector: {}
   ingress:
   - from:
-    - podSelector: {}
+    - podSelector:
+       matchLabels:
+         kubernetes.io/metadata.name: blue
