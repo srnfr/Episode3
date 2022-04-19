@@ -4,7 +4,7 @@ metadata:
   name: dns-allow-in-blue
   namespace: blue
 spec:
-  podSelector:
+  podSelector: {}
   ingress:
   - ports:
     - port: 53
