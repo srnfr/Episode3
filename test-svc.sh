@@ -4,7 +4,7 @@
 for nsd in default blue; do
 
 	NSDEBUG=$nsd
-	LABEL="null"
+	LABEL=null
 
 	DEBUGPODNAME=debug$RANDOM
 
