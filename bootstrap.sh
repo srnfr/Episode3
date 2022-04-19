@@ -11,5 +11,4 @@ done
 
 helm repo add argo https://argoproj.github.io/argo-helm
 
-helm install -f helm-argocd-values.yaml myargo argo/argo-cd
-
+helm install -f helm-argocd-values.yaml myargo argo/argo-cd --namespace kube-system
