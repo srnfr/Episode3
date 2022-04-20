@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl run -it --rm debug$RANDOM  -n blue --image=wbitt/network-multitool -- /bin/bash
+kubectl run -it --rm debug$RANDOM  -n default --image=wbitt/network-multitool -- /bin/bash
