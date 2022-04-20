@@ -8,7 +8,7 @@ for nsd in default blue; do
 
 	DEBUGPODNAME=debug$RANDOM
 
-	echo "#########################@"
+	echo "#########################"
 	kubectl run $DEBUGPODNAME --image=wbitt/network-multitool --restart=Never -l type=$LABEL -n $NSDEBUG
 
 	echo "Waiting for creation to complete..."
@@ -23,9 +23,8 @@ for nsd in default blue; do
 		echo "Test vers ${svc}..."
 		kubectl exec -it $DEBUGPODNAME -n $NSDEBUG -- curl -s -i -w "%{http_code}" --connect-timeout 2 -o /dev/null http://${svc}
 		echo ""
-		echo ""
 	done
 
-	kubectl delete pod/$DEBUGPODNAME --wait=false
+	kubectl delete pod/$DEBUGPODNAME -n $NSDEBUG --wait=false
 
 done
