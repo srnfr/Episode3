@@ -3,12 +3,13 @@
 for nsd in default blue; do
 
 	NSDEBUG=$nsd
-	LABEL=null
+	##LABEL="type=null"
+	LABEL="type=null,app=bookstore,role=api"
 
 	DEBUGPODNAME=debug$RANDOM
 
 	echo "#########################"
-	kubectl run $DEBUGPODNAME --image=wbitt/network-multitool --restart=Never -l type=$LABEL -n $NSDEBUG
+	kubectl run $DEBUGPODNAME --image=wbitt/network-multitool --restart=Never -l $LABEL -n $NSDEBUG
 
 	echo "Waiting for creation to complete..."
 	##echo "Namespace = $NSDEBUG"
