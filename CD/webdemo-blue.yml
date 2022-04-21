@@ -7,9 +7,6 @@ metadata:
     run: svc-echoserver
 spec:
   type: ClusterIP
-  ##type: NodePort
-  ##type: LoadBalancer
-  ##externalTrafficPolicy: Cluster
   ports:
   - port: 80
     targetPort: 8080
@@ -26,6 +23,8 @@ spec:
   selector:
     matchLabels:
       run: echoserver
+      app: bookstore
+      role: api
   replicas: 3
   template:
     metadata:
