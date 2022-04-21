@@ -30,6 +30,8 @@ spec:
     metadata:
       labels:
         run: echoserver
+        app: bookstore
+        role: api
     spec:
       containers:
       - name: echoserver
