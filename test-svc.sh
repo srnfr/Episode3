@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 for nsd in default blue; do
 
 	NSDEBUG=$nsd
