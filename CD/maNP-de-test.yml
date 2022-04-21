@@ -2,7 +2,7 @@ kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
   name: api-allow
-  namespace: default
+  namespace: blue
 spec:
   podSelector:
     matchLabels:
