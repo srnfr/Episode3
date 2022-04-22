@@ -10,7 +10,7 @@ spec:
       role: api
   ingress:
   - from:
-      - namespaceSelector: {}
-        podSelector:
+##      - namespaceSelector: {}
+      - podSelector:
           matchLabels:
             app: bookstore
