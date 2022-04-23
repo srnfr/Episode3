@@ -3,8 +3,8 @@
 for nsd in default blue; do
 
 	NSDEBUG=$nsd
-	LABEL="type=null"
-	##LABEL="type=null,app=bookstore"
+	##LABEL="type=null"
+	LABEL="type=null,app=bookstore"
 
 	DEBUGPODNAME=debug$RANDOM
 
