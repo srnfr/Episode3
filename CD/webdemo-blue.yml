@@ -25,7 +25,7 @@ spec:
       run: echoserver
       app: bookstore
       role: api
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
