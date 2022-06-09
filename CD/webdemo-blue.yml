@@ -35,6 +35,6 @@ spec:
     spec:
       containers:
       - name: echoserver
-        image: inanimate/echo-server
+        image: inanimate/echo-server:latest
         ports:
         - containerPort: 8080
